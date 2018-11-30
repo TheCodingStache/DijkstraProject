@@ -42,17 +42,17 @@ public final class HelloGraphT {
         Graph<URL, DefaultEdge> g = new DefaultDirectedGraph<>(DefaultEdge.class);
 
         try {
-            URL amazon = new URL("http://www.amazon.com");
+            URL amazonURL = new URL("http://www.amazon.com");
             URL yahoo = new URL("http://www.yahoo.com");
             URL ebay = new URL("http://www.ebay.com");
 
             // add the vertices
-            g.addVertex(amazon);
+            g.addVertex(amazonURL);
             g.addVertex(yahoo);
             g.addVertex(ebay);
 
             // add edges to create linking structure
-            g.addEdge(yahoo, amazon);
+            g.addEdge(yahoo, amazonURL);
             g.addEdge(yahoo, ebay);
         } catch (MalformedURLException e) {
             e.printStackTrace();
